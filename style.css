@@ -40,7 +40,7 @@ nav a:hover {
 }
 
 .hero {
-  background-image: url('images/building.jpg');
+  background-image: url('building.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
