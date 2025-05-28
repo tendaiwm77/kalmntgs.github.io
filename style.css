@@ -40,12 +40,15 @@ nav a:hover {
 }
 
 .hero {
-  position: relative;
+  background-image: url('images/building.jpg');
+  background-size: cover;
+  background-position: center;
   height: 100vh;
-  background: url('/mnt/data/abcc2dbb-2ba3-481e-9c18-3b67458990cd.jpg') center/cover no-repeat;
+  position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  color: white;
 }
 
 .hero-overlay {
