@@ -1,13 +1,16 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body and global styles */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #000;
   color: #f1f1f1;
+  line-height: 1.6;
 }
 
 header {
@@ -39,7 +42,9 @@ nav a:hover {
   color: #ffc800;
 }
 
+/* Hero Section */
 .hero {
+  background-image: url('../images/building.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -57,6 +62,7 @@ nav a:hover {
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
 }
 
 .hero-content {
@@ -64,17 +70,13 @@ nav a:hover {
   color: #ffc800;
   text-align: center;
   z-index: 1;
+  max-width: 90%;
+  padding: 0 1rem;
 }
 
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
-}
-
-.hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  color: #fff;
 }
 
 .hero-content a {
@@ -91,10 +93,18 @@ nav a:hover {
   background-color: #e6b800;
 }
 
+/* Accordion Section */
 #accordion-section {
   padding: 3rem 2rem;
   max-width: 800px;
-  margin: auto;
+  margin: 3rem auto;
+}
+
+#accordion-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #ffc800;
 }
 
 details {
@@ -109,12 +119,19 @@ details {
 details summary {
   font-weight: bold;
   cursor: pointer;
+  outline: none;
 }
 
 details[open] summary {
   color: #fff;
 }
 
+details p {
+  margin-top: 0.5rem;
+  color: #ccc;
+}
+
+/* Footer */
 footer {
   text-align: center;
   padding: 2rem;
@@ -132,4 +149,15 @@ footer {
 .fade-in-section.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  nav a {
+    margin-left: 0.5rem;
+  }
 }
