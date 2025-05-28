@@ -1,4 +1,4 @@
-/* Reset */
+/* Reset all margins, paddings, and set box-sizing */
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +13,7 @@ body {
   line-height: 1.6;
 }
 
+/* Header styles */
 header {
   display: flex;
   justify-content: space-between;
@@ -42,9 +43,9 @@ nav a:hover {
   color: #ffc800;
 }
 
-/* Hero Section */
+/* Hero section styles */
 .hero {
-  background-image: url('../images/building.jpg');
+  background-image: url('../image/building.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -93,7 +94,7 @@ nav a:hover {
   background-color: #e6b800;
 }
 
-/* Accordion Section */
+/* Accordion section */
 #accordion-section {
   padding: 3rem 2rem;
   max-width: 800px;
@@ -131,7 +132,7 @@ details p {
   color: #ccc;
 }
 
-/* Footer */
+/* Footer styles */
 footer {
   text-align: center;
   padding: 2rem;
@@ -139,7 +140,7 @@ footer {
   color: #888;
 }
 
-/* Scroll fade-in */
+/* Scroll fade-in animation */
 .fade-in-section {
   opacity: 0;
   transform: translateY(20px);
@@ -151,7 +152,7 @@ footer {
   transform: translateY(0);
 }
 
-/* Responsive */
+/* Responsive styles */
 @media (max-width: 600px) {
   .hero-content h1 {
     font-size: 2rem;
