@@ -3,19 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Page Title</title>
+  <title>Contact – KALM-NTG</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    /* Global Styles */
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f9f9f9;
+    * {
+      box-sizing: border-box;
     }
 
-    /* Navigation Styles */
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f4f7f9;
+      color: #222;
+    }
+
     nav {
-      background-color: #222;
-      padding: 15px 30px;
+      background-color: #1a1a1a;
+      padding: 16px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -23,150 +27,84 @@
 
     nav .logo {
       color: #fff;
-      font-size: 1.5em;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+      font-size: 1.5rem;
+      font-weight: 600;
     }
 
     nav ul {
       list-style: none;
       display: flex;
+      gap: 24px;
       margin: 0;
       padding: 0;
-      gap: 25px;
     }
 
     nav ul li a {
       color: #fff;
       text-decoration: none;
-      font-size: 1em;
-      transition: color 0.3s ease;
+      font-weight: 500;
     }
 
     nav ul li a:hover {
-      color: #00c2cb;
+      color: #00bcd4;
     }
 
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-<nav>
-  <div class="logo">KALM-NTG</div>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact Us – KALM-NTG</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f9f9f9;
-    }
-
-    nav {
-      background-color: #222;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav .logo {
-      color: #fff;
-      font-size: 1.5em;
-      font-weight: bold;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      margin: 0;
-      padding: 0;
-      gap: 20px;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 1em;
-    }
-
-    nav ul li a:hover {
-      color: #00c2cb;
-    }
-
-    .contact-section {
-      max-width: 800px;
+    .container {
+      max-width: 1000px;
       margin: 60px auto;
       padding: 0 20px;
       text-align: center;
     }
 
-    .contact-section h2 {
-      font-size: 2em;
-      margin-bottom: 10px;
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+      color: #111;
     }
 
-    .contact-section p {
+    p.description {
+      font-size: 1.1rem;
       color: #555;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
 
     form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.08);
       display: flex;
       flex-direction: column;
       gap: 20px;
-      max-width: 480px;
-      margin: 0 auto;
     }
 
     input, textarea {
-      padding: 12px;
+      padding: 14px;
+      font-size: 1rem;
+      border-radius: 8px;
       border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1em;
-      resize: vertical;
-    }
-
-    button {
-      background-color: #00c2cb;
-      color: white;
-      border: none;
-      padding: 12px;
-      font-size: 1em;
-      border-radius: 5px;
-      cursor: pointer;
       width: 100%;
     }
 
-    button:hover {
-      background-color: #009aa3;
+    button {
+      padding: 14px;
+      background-color: #00bcd4;
+      color: white;
+      border: none;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s ease;
     }
 
-    @media (max-width: 600px) {
+    button:hover {
+      background-color: #0097a7;
+    }
+
+    @media (max-width: 640px) {
       nav {
         flex-direction: column;
         align-items: flex-start;
@@ -174,15 +112,15 @@
 
       nav ul {
         flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
+        gap: 12px;
+        margin-top: 12px;
       }
     }
   </style>
 </head>
 <body>
 
-<!-- Navigation Bar -->
+<!-- Navigation -->
 <nav>
   <div class="logo">KALM-NTG</div>
   <ul>
@@ -194,19 +132,18 @@
 </nav>
 
 <!-- Contact Section -->
-<section class="contact-section">
+<section class="container">
   <h2>Contact Us</h2>
-  <p>
-    Welcome to a world of limitless possibilities, where the journey is as exhilarating as the destination,
-    and where every moment is an opportunity to make your mark on the canvas of existence.
-    The only limit is the extent of your imagination.
+  <p class="description">
+    Have questions or want to work with us? Fill out the form and we’ll get back to you shortly.
   </p>
 
-  <form name="contact" method="POST" data-netlify="true">
+  <!-- Functional contact form using Formspree -->
+  <form action="https://formspree.io/f/your_form_id" method="POST">
     <input type="text" name="name" placeholder="Your Name" required />
     <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" rows="5" placeholder="Your Message"></textarea>
-    <button type="submit">Send</button>
+    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
   </form>
 </section>
 
