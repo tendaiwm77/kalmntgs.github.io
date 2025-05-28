@@ -1,4 +1,4 @@
-// Scroll fade-in animation for elements with class "fade-in-section"
+// Fade-in animation for elements with the class 'fade-in-section'
 document.addEventListener('DOMContentLoaded', () => {
   const faders = document.querySelectorAll('.fade-in-section');
 
@@ -7,14 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
     rootMargin: "0px 0px -50px 0px"
   };
 
-  const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-      if (!entry.isIntersecting) {
-        return;
-      } else {
-        entry.target.classList.add('visible');
-        appearOnScroll.unobserve(entry.target);
-      }
+      if (!entry.isIntersecting) return;
+
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
     });
   }, appearOptions);
 
