@@ -1,35 +1,31 @@
-// Wait until the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', function () {
-  const heroContent = document.getElementById('hero-content');
-  const accordionItems = document.querySelectorAll('details');
-
-  // Observer for hero section fade-in
-  const heroObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        heroContent.classList.add('visible');
-        heroObserver.unobserve(entry.target); // Animate only once
-      }
-    });
-  }, {
-    threshold: 0.5
-  });
-
-  if (heroContent) {
-    heroObserver.observe(heroContent);
+// Wait for everything to load, then hide loader and start animations
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loader');
+  if (loader) {
+    loader.style.display = 'none';
   }
 
-  // Observer for each accordion detail fade-in
-  const accordionObserver = new IntersectionObserver(entries => {
+  // Animate hero content fade-in
+  const heroContent = document.getElementById('hero-content');
+  if (heroContent) {
+    heroContent.classList.add('visible');
+  }
+
+  // Animate accordion items on scroll with IntersectionObserver
+  const accordionDetails = document.querySelectorAll('#accordion-section details');
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.15
+  };
+  const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        accordionObserver.unobserve(entry.target); // Animate only once
+        observer.unobserve(entry.target); // Animate only once
       }
     });
-  }, {
-    threshold: 0.2
-  });
+  }, options);
 
-  accordionItems.forEach(item => accordionObserver.observe(item));
+  accordionDetails.forEach(detail => observer.observe(detail));
 });
