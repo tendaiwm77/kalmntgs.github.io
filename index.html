@@ -5,16 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KALM-NTG</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script defer src="script.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
-  <!-- Loading Screen -->
-  <div id="loader">
-    <div class="spinner"></div>
-  </div>
-
   <header>
     <div class="logo">KALM-NTG</div>
     <nav>
@@ -28,45 +21,35 @@
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content" id="hero-content">
-      <h1 data-aos="fade-down">Building the Future</h1>
-      <a href="#accordion-section" data-aos="fade-up">Explore Our Services</a>
+      <h1>Building the Future</h1>
+      <p>We deliver architecture and construction with purpose and precision.</p>
+      <a href="#accordion-section" class="scroll-link">Explore Our Services</a>
     </div>
   </section>
 
-  <!-- New Introduction Section -->
-  <section class="intro" data-aos="fade-up">
-    <div class="container">
-      <h2>Welcome to KALM-NTG</h2>
-      <p>
-        We are a forward-thinking construction and architecture company, delivering excellence in every project we undertake. Our focus is quality, innovation, and client satisfaction.
-      </p>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="accordion-section" aria-label="Services accordion section">
-    <h2 data-aos="fade-up">Quality Control and Procedures</h2>
-    <details data-aos="fade-right">
+  <section id="accordion-section" class="fade-in-section">
+    <h2>Quality Control and Procedures</h2>
+    <details>
       <summary>Quality Management Systems</summary>
       <p>We follow internationally recognized quality management standards to ensure project excellence.</p>
     </details>
-    <details data-aos="fade-left">
+    <details>
       <summary>Quality Control Plan</summary>
       <p>Implementation of detailed plans for monitoring and maintaining quality at every stage.</p>
     </details>
-    <details data-aos="fade-right">
+    <details>
       <summary>Communication Channels</summary>
       <p>Open and clear communication among all stakeholders for project success.</p>
     </details>
-    <details data-aos="fade-left">
+    <details>
       <summary>Documentation Management Systems</summary>
       <p>Effective documentation to ensure transparency and accountability.</p>
     </details>
-    <details data-aos="fade-right">
+    <details>
       <summary>Human Resources Management</summary>
       <p>Skilled personnel managed to deliver the highest standards.</p>
     </details>
-    <details data-aos="fade-left">
+    <details>
       <summary>Safety, Health, and Environmental Plan</summary>
       <p>We prioritize safety and environmental responsibility on all projects.</p>
     </details>
@@ -75,9 +58,5 @@
   <footer>
     &copy; 2025 KALM-NTG. All rights reserved.
   </footer>
-
-  <script>
-    AOS.init();
-  </script>
 </body>
 </html>
