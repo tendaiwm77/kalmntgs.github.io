@@ -6,9 +6,8 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background: #fff;
-  color: #333;
+  background: #000;
+  color: #f1f1f1;
 }
 
 header {
@@ -16,17 +15,16 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #111;
-  color: #fff;
+  background-color: #000;
+  color: #ffc800;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 1000;
 }
 
 .logo {
-  font-weight: 700;
-  font-size: 1.5rem;
-  letter-spacing: 1.5px;
+  font-weight: bold;
+  font-size: 1.6rem;
 }
 
 nav a {
@@ -38,13 +36,13 @@ nav a {
 }
 
 nav a:hover {
-  color: #00c6ff;
+  color: #ffc800;
 }
 
 .hero {
   position: relative;
-  height: 90vh;
-  background: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+  height: 100vh;
+  background: url('/mnt/data/abcc2dbb-2ba3-481e-9c18-3b67458990cd.jpg') center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,15 +54,14 @@ nav a:hover {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .hero-content {
   position: relative;
-  color: white;
+  color: #ffc800;
   text-align: center;
   z-index: 1;
-  animation: fadeIn 1.5s ease-in-out;
 }
 
 .hero-content h1 {
@@ -75,15 +72,21 @@ nav a:hover {
 .hero-content p {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
+  color: #fff;
 }
 
 .hero-content a {
   padding: 0.75rem 1.5rem;
-  background-color: #00c6ff;
-  color: #fff;
+  background-color: #ffc800;
+  color: #000;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.hero-content a:hover {
+  background-color: #e6b800;
 }
 
 #accordion-section {
@@ -94,30 +97,30 @@ nav a:hover {
 
 details {
   margin-bottom: 1rem;
-  border: 1px solid #ddd;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
   padding: 1rem;
   border-radius: 5px;
-  background-color: #f9f9f9;
-  transition: all 0.3s ease;
+  color: #ffc800;
+}
+
+details summary {
+  font-weight: bold;
+  cursor: pointer;
 }
 
 details[open] summary {
-  color: #00c6ff;
-}
-
-summary {
-  font-weight: bold;
-  cursor: pointer;
+  color: #fff;
 }
 
 footer {
   text-align: center;
   padding: 2rem;
-  background: #111;
-  color: #fff;
+  background: #000;
+  color: #888;
 }
 
-/* Fade In Animation */
+/* Scroll fade-in */
 .fade-in-section {
   opacity: 0;
   transform: translateY(20px);
@@ -127,9 +130,4 @@ footer {
 .fade-in-section.visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
 }
