@@ -1,9 +1,8 @@
-// Scroll animation
 document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll(".fade-in-section");
 
   const appearOptions = {
-    threshold: 0.2,
+    threshold: 0.1,
     rootMargin: "0px 0px -50px 0px"
   };
 
