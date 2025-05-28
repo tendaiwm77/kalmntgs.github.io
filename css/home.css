@@ -46,6 +46,7 @@ nav a:hover {
 /* Hero section styles */
 .hero {
   background-image: url('../image/building.jpg');
+  /* ↑ This ../ means "go up one folder from css/" then into image/ */
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -54,6 +55,8 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   color: white;
+}
+
 }
 
 .hero-overlay {
