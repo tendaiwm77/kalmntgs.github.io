@@ -1,52 +1,66 @@
-const carousel = document.querySelector('.stats-carousel');
-const dots = document.querySelectorAll('.dot');
-const leftArrow = document.querySelector('.arrow.left');
-const rightArrow = document.querySelector('.arrow.right');
-const totalSlides = dots.length;
-let currentSlide = 0;
-let autoSlide;
+// home.js
 
-function goToSlide(index) {
-  currentSlide = (index + totalSlides) % totalSlides;
-  carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-  dots.forEach(dot => dot.classList.remove('active'));
-  dots[currentSlide].classList.add('active');
-}
+document.addEventListener('DOMContentLoaded', () => {
+  // --- Stats Carousel ---
+  const carousel = document.querySelector('.stats-carousel');
+  const dots = document.querySelectorAll('.dot');
+  const prevBtn = document.querySelector('.arrow.left');
+  const nextBtn = document.querySelector('.arrow.right');
+  const totalSlides = dots.length;
+  let currentIndex = 0;
 
-function nextSlide() {
-  goToSlide(currentSlide + 1);
-}
+  function updateCarousel() {
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[currentIndex].classList.add('active');
+  }
 
-function prevSlide() {
-  goToSlide(currentSlide - 1);
-}
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+  });
 
-rightArrow.addEventListener('click', () => {
-  nextSlide();
-  resetAutoSlide();
-});
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateCarousel();
+  });
 
-leftArrow.addEventListener('click', () => {
-  prevSlide();
-  resetAutoSlide();
-});
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      currentIndex = parseInt(dot.dataset.index);
+      updateCarousel();
+    });
+  });
 
-dots.forEach((dot, index) => {
-  dot.addEventListener('click', () => {
-    goToSlide(index);
-    resetAutoSlide();
+  // Initialize carousel on page load
+  updateCarousel();
+
+  // --- Fade-in on Scroll ---
+  const faders = document.querySelectorAll('.fade-in-section');
+  const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => appearOnScroll.observe(fader));
+
+  // --- Smooth Scroll for Nav Links ---
+  const navLinks = document.querySelectorAll('header nav a[href^="#"]');
+  navLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const targetID = link.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetID);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 70, // Adjust for fixed header height
+          behavior: 'smooth'
+        });
+      }
+    });
   });
 });
-
-function startAutoSlide() {
-  autoSlide = setInterval(nextSlide, 4000);
-}
-
-function resetAutoSlide() {
-  clearInterval(autoSlide);
-  startAutoSlide();
-}
-
-// Init
-goToSlide(0);
-startAutoSlide();
