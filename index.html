@@ -4,7 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>KALM-NTG</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/home.css" />
+
+  <!-- JS -->
   <script defer src="js/home.js"></script>
 </head>
 <body>
@@ -17,44 +27,119 @@
     </nav>
   </header>
 
-  <section class="hero" aria-label="Hero section with background image">
+  <!-- HERO SECTION -->
+  <section class="hero" aria-label="Hero section with background video">
+    <video autoplay muted loop class="hero-bg">
+      <source src="media/hero-video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
     <div class="hero-overlay"></div>
     <div class="hero-content" id="hero-content">
-      <h1>Building the Future</h1>
-      <a href="#accordion-section">Explore Our Services</a>
+      <h1>Building the Future with Excellence</h1>
+      <p>Your trusted partner in construction and infrastructure</p>
+      <a href="#accordion-section" class="btn-primary">Explore Our Services</a>
     </div>
   </section>
 
+  <!-- STATS SECTION -->
+  <section class="stats-section">
+    <div class="stat">
+      <h2 class="counter" data-target="150">0</h2>
+      <p>Completed Projects</p>
+    </div>
+    <div class="stat">
+      <h2 class="counter" data-target="30">0</h2>
+      <p>Expert Engineers</p>
+    </div>
+    <div class="stat">
+      <h2 class="counter" data-target="25">0</h2>
+      <p>Ongoing Projects</p>
+    </div>
+    <div class="stat">
+      <h2 class="counter" data-target="100">0</h2>
+      <p>Satisfied Clients</p>
+    </div>
+  </section>
+
+  <!-- PROJECT PORTFOLIO -->
+  <section class="projects fade-in-section">
+    <h2>Our Recent Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="images/project1.jpg" alt="Project 1" />
+        <h3>Luxury Apartment Build</h3>
+      </div>
+      <div class="project-card">
+        <img src="images/project2.jpg" alt="Project 2" />
+        <h3>Corporate HQ Construction</h3>
+      </div>
+      <div class="project-card">
+        <img src="images/project3.jpg" alt="Project 3" />
+        <h3>Urban Road Development</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM SECTION -->
+  <section class="team-section">
+    <h2>Meet the Team</h2>
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="images/ceo.jpg" alt="CEO" />
+        <h3>Nomusa Khumalo</h3>
+        <p>CEO & Founder</p>
+      </div>
+      <div class="team-member">
+        <img src="images/engineer.jpg" alt="Engineer" />
+        <h3>Thabo Mokoena</h3>
+        <p>Lead Engineer</p>
+      </div>
+      <div class="team-member">
+        <img src="images/safety.jpg" alt="Safety Officer" />
+        <h3>Ayanda Ndlovu</h3>
+        <p>Safety Officer</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCORDION SECTION -->
   <section id="accordion-section" class="fade-in-section">
     <h2>Quality Control and Procedures</h2>
     <details>
-      <summary>Quality Management Systems</summary>
-      <p>We follow internationally recognized quality management standards.</p>
+      <summary><i class="fas fa-check-circle"></i> Quality Management Systems</summary>
+      <p>We follow internationally recognized ISO 9001 quality management standards.</p>
     </details>
     <details>
-      <summary>Quality Control Plan</summary>
-      <p>Detailed plans for monitoring and maintaining quality.</p>
+      <summary><i class="fas fa-file-alt"></i> Quality Control Plan</summary>
+      <p>Plans with KPIs to ensure project excellence and client satisfaction.</p>
     </details>
     <details>
-      <summary>Communication Channels</summary>
-      <p>Open and clear communication for project success.</p>
+      <summary><i class="fas fa-comments"></i> Communication Channels</summary>
+      <p>Regular briefings, email updates, and stakeholder meetings to stay aligned.</p>
     </details>
     <details>
-      <summary>Documentation Management</summary>
-      <p>Effective record keeping and transparency.</p>
+      <summary><i class="fas fa-folder-open"></i> Documentation Management</summary>
+      <p>Digitally organized documentation accessible for stakeholders at any time.</p>
     </details>
     <details>
-      <summary>HR Management</summary>
-      <p>Skilled professionals aligned with our mission.</p>
+      <summary><i class="fas fa-users-cog"></i> HR Management</summary>
+      <p>Professionals with a track record of delivering on time and on budget.</p>
     </details>
     <details>
-      <summary>Safety & Environmental Plan</summary>
-      <p>Safety-first culture with environmental responsibility.</p>
+      <summary><i class="fas fa-shield-alt"></i> Safety & Environmental Plan</summary>
+      <p>Zero-accident policy and green-friendly construction methods.</p>
     </details>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    &copy; 2025 KALM-NTG. All rights reserved.
+    <p>&copy; 2025 KALM-NTG. All rights reserved.</p>
+    <p>
+      Follow us:
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </p>
   </footer>
 </body>
 </html>
