@@ -2,59 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>KALM-NTG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KALM-NTG | Home</title>
   <link rel="stylesheet" href="css/home.css" />
-  <script defer src="js/home.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header>
+  <header class="navbar">
     <div class="logo">KALM-NTG</div>
     <nav>
-      <a href="html/about.html">About</a>
-      <a href="html/services.html">Services</a>
-      <a href="html/contact.html">Contact Us</a>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section class="hero" aria-label="Hero section with background image">
-    <div class="hero-overlay"></div>
-    <div class="hero-content" id="hero-content">
-      <h1>Building the Future</h1>
-      <a href="#accordion-section">Explore Our Services</a>
+  <main class="hero">
+    <div class="hero-text">
+      <h1>QUALITY CONSTRUCTION</h1>
+      <p>KALM-NTG is a trusted leader in construction excellence in Southern Africa.</p>
+      <a href="services.html" class="btn-primary">View Our Services</a>
     </div>
-  </section>
+    <div class="hero-form">
+      <h2>Order a Sketch of Your Home</h2>
+      <p>Only R199 for 3D Plan</p>
+      <form id="sketchForm">
+        <input type="text" placeholder="Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="tel" placeholder="Phone" required />
+        <button type="submit" class="btn-secondary">Order a Design Project</button>
+      </form>
+    </div>
+  </main>
 
-  <section id="accordion-section" class="fade-in-section">
-    <h2>Quality Control and Procedures</h2>
-    <details>
-      <summary>Quality Management Systems</summary>
-      <p>We follow internationally recognized quality management standards.</p>
-    </details>
-    <details>
-      <summary>Quality Control Plan</summary>
-      <p>Detailed plans for monitoring and maintaining quality.</p>
-    </details>
-    <details>
-      <summary>Communication Channels</summary>
-      <p>Open and clear communication for project success.</p>
-    </details>
-    <details>
-      <summary>Documentation Management</summary>
-      <p>Effective record keeping and transparency.</p>
-    </details>
-    <details>
-      <summary>HR Management</summary>
-      <p>Skilled professionals aligned with our mission.</p>
-    </details>
-    <details>
-      <summary>Safety & Environmental Plan</summary>
-      <p>Safety-first culture with environmental responsibility.</p>
-    </details>
-  </section>
-
-  <footer>
-    &copy; 2025 KALM-NTG. All rights reserved.
-  </footer>
+  <script src="js/home.js"></script>
 </body>
 </html>
