@@ -31,8 +31,14 @@ header {
   font-size: 1.6rem;
 }
 
+/* Add flex container for nav to align items horizontally on the right */
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Navigation links styling */
 nav a {
-  margin-left: 1rem;
   text-decoration: none;
   color: #fff;
   font-weight: 500;
@@ -54,9 +60,6 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   color: white;
-}
-
-
 }
 
 .hero-overlay {
@@ -161,7 +164,7 @@ footer {
     font-size: 2rem;
   }
 
-  nav a {
-    margin-left: 0.5rem;
+  nav {
+    gap: 1rem;
   }
 }
