@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KALM-NTG</title>
   <link rel="stylesheet" href="css/home.css" />
-<script defer src="js/home.js"></script>
+  <script defer src="js/home.js"></script>
   <style>
     .hero {
       background-image: url("building.jpg");
@@ -14,15 +14,8 @@
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">KALM-NTG</div>
-    <nav>
-      <a href="html/about.html">About</a>
-      <a href="html/services.html">Services</a>
-      <a href="html/project-portfolio.html">Project Portfolio</a>
-      <a href="html/contact-us.html">Contact Us</a>
-    </nav>
-  </header>
+  <!-- ✅ Dynamic Nav Placeholder -->
+  <header id="navbar-placeholder"></header>
 
   <section class="hero" aria-label="Hero section with background image">
     <div class="hero-overlay"></div>
@@ -63,5 +56,14 @@
   <footer>
     &copy; 2025 KALM-NTG. All rights reserved.
   </footer>
+
+  <!-- ✅ Script to Inject Navbar -->
+  <script>
+    fetch("components/navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+      });
+  </script>
 </body>
 </html>
