@@ -1,135 +1,164 @@
+/* Reset all margins, paddings, and set box-sizing */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+/* Body and global styles */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #ffffff;
-  color: #1e2a38;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #000;
+  color: #f1f1f1;
+  line-height: 1.6;
 }
 
-.navbar {
+/* Header styles */
+header {
   display: flex;
   justify-content: space-between;
-  padding: 20px 40px;
-  background-color: #1e2a38;
-  color: white;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #000;
+  color: #ffc800;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
-  font-size: 24px;
   font-weight: bold;
+  font-size: 1.6rem;
 }
 
-.navbar ul {
-  display: flex;
-  list-style: none;
-  gap: 30px;
-}
-
-.navbar a {
-  color: white;
+nav a {
+  margin-left: 1rem;
   text-decoration: none;
+  color: #fff;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
-.navbar a:hover {
-  color: #2979ff;
+nav a:hover {
+  color: #ffc800;
 }
 
+/* Hero section styles */
 .hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 60px;
-  background-image: url("../building.jpg");
+  background-image: url('../building.jpg');  /* Correct path to your image */
   background-size: cover;
   background-position: center;
   height: 100vh;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
 }
 
-.hero::before {
-  content: '';
+.hero-overlay {
   position: absolute;
-  inset: 0;
-  background-color: rgba(30, 42, 56, 0.85);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
   z-index: 0;
 }
 
-.hero-text, .hero-form {
+.hero-content {
   position: relative;
+  color: #ffc800;
+  text-align: center;
   z-index: 1;
-  width: 45%;
+  max-width: 90%;
+  padding: 0 1rem;
 }
 
-.hero-text h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-  color: #ffffff;
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
-.hero-text p {
-  font-size: 18px;
-  margin-bottom: 30px;
-  color: #d0e8ff;
-}
-
-.btn-primary {
-  background-color: #2979ff;
-  color: white;
-  padding: 12px 25px;
+.hero-content a {
+  padding: 0.75rem 1.5rem;
+  background-color: #ffc800;
+  color: #000;
   text-decoration: none;
-  font-weight: 600;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: #1c54b2;
-}
-
-.hero-form {
-  background-color: white;
-  padding: 30px;
-  border-radius: 10px;
-  color: #1e2a38;
-}
-
-.hero-form h2 {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-
-.hero-form p {
   font-weight: bold;
-  color: #2979ff;
-  margin-bottom: 20px;
+  transition: background 0.3s ease;
 }
 
-.hero-form input {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+.hero-content a:hover {
+  background-color: #e6b800;
 }
 
-.btn-secondary {
-  background-color: #2979ff;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  font-weight: 600;
+/* Accordion section */
+#accordion-section {
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: 3rem auto;
+}
+
+#accordion-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #ffc800;
+}
+
+details {
+  margin-bottom: 1rem;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  padding: 1rem;
   border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  color: #ffc800;
 }
 
-.btn-secondary:hover {
-  background-color: #1c54b2;
+details summary {
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
+
+details[open] summary {
+  color: #fff;
+}
+
+details p {
+  margin-top: 0.5rem;
+  color: #ccc;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #000;
+  color: #888;
+}
+
+/* Scroll fade-in animation */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  nav a {
+    margin-left: 0.5rem;
+  }
 }
