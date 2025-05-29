@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   color: #333;
-  background: url('../images/building.jpg') no-repeat center center fixed;
+  background: url('../building.jpg') no-repeat center center fixed;
   background-size: cover;
   overflow-x: hidden;
 }
