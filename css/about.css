@@ -80,4 +80,101 @@ body {
   color: white;
 }
 
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #2e3b4e;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 8px;
+}
+
+/* Team Section */
+.team-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.team-member {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.team-member h2 {
+  font-size: 1.3rem;
+  color: #1a1a1a;
+}
+
+.team-member h4 {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.team-member p {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+/* Disciplines Section */
+.disciplines-section {
+  margin-top: 40px;
+}
+
+.disciplines-section h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #2e3b4e;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+table thead {
+  background-color: #324960;
+  color: white;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #f1f5f9;
+}
 
