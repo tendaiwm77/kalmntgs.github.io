@@ -28,6 +28,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem;
+  background-color: #004466;
 }
 
 .logo a {
@@ -56,6 +58,13 @@ header {
 .nav-links li a:hover {
   color: #ffcc00;
   text-decoration: underline;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
 }
 
 /* Main Content */
@@ -204,10 +213,25 @@ footer {
   margin-top: auto;
 }
 
-/* Responsive */
+/* Responsive Styles */
 @media (max-width: 768px) {
   .nav-links {
-    gap: 15px;
+    display: none;
+    flex-direction: column;
+    background-color: #004466;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
   }
 
   .team-section {
