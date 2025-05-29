@@ -1,16 +1,17 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // Animated Counters
-  const counters = document.querySelectorAll('.counter');
+// Counter animation for stats
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".counter");
+  const speed = 200;
 
   counters.forEach(counter => {
     const updateCount = () => {
-      const target = +counter.getAttribute('data-target');
+      const target = +counter.getAttribute("data-target");
       const count = +counter.innerText;
-      const increment = target / 200; // duration ~ 2 seconds
+      const increment = target / speed;
 
       if (count < target) {
         counter.innerText = Math.ceil(count + increment);
-        setTimeout(updateCount, 10);
+        setTimeout(updateCount, 20);
       } else {
         counter.innerText = target;
       }
@@ -20,25 +21,17 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Fade-in on scroll
-  const faders = document.querySelectorAll('.fade-in-section');
+  const fadeSections = document.querySelectorAll(".fade-in-section");
 
-  const appearOptions = {
-    threshold: 0,
-    rootMargin: "0px 0px -100px 0px"
-  };
-
-  const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+  const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (!entry.isIntersecting) {
-        return;
-      } else {
-        entry.target.classList.add('is-visible');
-        appearOnScroll.unobserve(entry.target);
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
       }
     });
-  }, appearOptions);
-
-  faders.forEach(fader => {
-    appearOnScroll.observe(fader);
+  }, {
+    threshold: 0.1
   });
+
+  fadeSections.forEach(section => observer.observe(section));
 });
