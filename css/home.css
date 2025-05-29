@@ -45,7 +45,7 @@ nav a:hover {
 
 /* Hero section styles */
 .hero {
-  background-image: url('../images/building.jpg');  /* Correct path to your image */
+  background-image: url('../building.jpg');  /* Correct path to your image */
   background-size: cover;
   background-position: center;
   height: 100vh;
