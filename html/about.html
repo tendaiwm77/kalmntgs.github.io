@@ -1,239 +1,332 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <title>About | KALM-NTG</title>
+html {
+  scroll-behavior: smooth;
+}
 
-  <link rel="stylesheet" href="../css/about.css">
-</head>
+/* =========================
+   BODY
+========================= */
+body {
+  font-family: Arial, Helvetica, sans-serif;
 
-<body>
+  background: #0f1115;
+  color: white;
 
-  <!-- HEADER -->
-  <header>
+  line-height: 1.7;
+}
 
-    <div class="logo">
-      <a href="../index.html">KALM-NTG</a>
-    </div>
+/* =========================
+   HEADER
+========================= */
+header {
+  position: sticky;
+  top: 0;
 
-    <nav>
-      <a href="../index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  </header>
+  padding: 1rem 2rem;
 
-  <!-- HERO -->
-  <section class="about-hero">
+  background: rgba(15, 17, 21, 0.85);
 
-    <div class="hero-overlay"></div>
+  backdrop-filter: blur(12px);
 
-    <div class="hero-content">
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 
-      <p class="small-text">ABOUT KALM-NTG</p>
+  z-index: 1000;
+}
 
-      <h1>
-        Designing spaces
-        for the future.
-      </h1>
+.logo a {
+  color: white;
+  text-decoration: none;
 
-      <p class="hero-description">
-        A multidisciplinary architectural and engineering
-        practice focused on innovation, sustainability,
-        and precision.
-      </p>
+  font-size: 1.3rem;
+  font-weight: bold;
 
-    </div>
+  letter-spacing: 1px;
+}
 
-  </section>
+nav a {
+  color: rgba(255,255,255,0.7);
 
-  <!-- ABOUT GRID -->
-  <section class="about-grid">
+  text-decoration: none;
 
-    <div class="info-card">
-      <h2>Introduction</h2>
+  margin-left: 1.5rem;
 
-      <p>
-        We provide tailored professional services
-        built around flexibility, precision,
-        and long-term value creation.
-      </p>
-    </div>
+  transition: 0.3s ease;
+}
 
-    <div class="info-card">
-      <h2>The Company</h2>
+nav a:hover {
+  color: white;
+}
 
-      <p>
-        KALM-NTG combines architecture,
-        civil engineering, quantity surveying,
-        and project management expertise.
-      </p>
-    </div>
+/* =========================
+   ABOUT HERO
+========================= */
+.about-hero {
+  padding: 9rem 2rem 5rem;
 
-    <div class="info-card">
-      <h2>Vision</h2>
+  text-align: center;
 
-      <p>
-        We believe exceptional design improves
-        communities and quality of life while
-        driving sustainable growth.
-      </p>
-    </div>
+  max-width: 1000px;
+  margin: auto;
+}
 
-    <div class="info-card">
-      <h2>Mission</h2>
+.small-text {
+  color: #9ca3af;
 
-      <p>
-        Delivering modern design solutions through
-        innovation, environmental responsibility,
-        and project excellence.
-      </p>
-    </div>
+  letter-spacing: 3px;
 
-    <div class="info-card full-width">
-      <h2>Company Background</h2>
+  margin-bottom: 1rem;
 
-      <p>
-        Founded in 2012, KALM-NTG Architects
-        is a South African multidisciplinary
-        practice delivering impactful, modern,
-        and client-focused projects.
-      </p>
-    </div>
+  font-size: 0.85rem;
+}
 
-  </section>
+.hero-content h1 {
+  font-size: 4rem;
 
-  <!-- TEAM -->
-  <section class="team-section">
+  line-height: 1.1;
 
-    <div class="section-header">
-      <h2>Leadership Team</h2>
+  margin-bottom: 1.5rem;
 
-      <p>
-        Experienced professionals driving
-        innovation and execution.
-      </p>
-    </div>
+  max-width: 800px;
+  margin-inline: auto;
+}
 
-    <div class="team-grid">
+.hero-description {
+  color: rgba(255,255,255,0.72);
 
-      <div class="team-card">
-        <h3>Lovemore A. Munyaradzi</h3>
+  max-width: 700px;
 
-        <span>Managing Director</span>
+  margin: auto;
 
-        <p>
-          Over 20 years of architectural
-          leadership and project delivery
-          experience.
-        </p>
-      </div>
+  font-size: 1.1rem;
+}
 
-      <div class="team-card">
-        <h3>James Mwanjira</h3>
+/* =========================
+   ABOUT GRID
+========================= */
+.about-grid {
+  display: grid;
 
-        <span>Director Associate</span>
+  grid-template-columns:
+    repeat(auto-fit, minmax(320px, 1fr));
 
-        <p>
-          Experienced design architect with
-          strong conceptual and technical
-          expertise.
-        </p>
-      </div>
+  gap: 1.5rem;
 
-      <div class="team-card">
-        <h3>Thuto Mokgothu</h3>
+  max-width: 1200px;
 
-        <span>Quantity Surveying Director</span>
+  margin: auto;
 
-        <p>
-          Specialist in quantity surveying
-          and construction project management.
-        </p>
-      </div>
+  padding: 0 2rem 6rem;
+}
 
-      <div class="team-card">
-        <h3>Seolebaleng G. Ramakepe</h3>
+/* =========================
+   CARDS
+========================= */
+.info-card,
+.team-card,
+.table-container {
+  background: #171a21;
 
-        <span>Associate</span>
+  border: 1px solid rgba(255,255,255,0.08);
 
-        <p>
-          Focused on technical coordination,
-          design execution, and project delivery.
-        </p>
-      </div>
+  border-radius: 24px;
 
-    </div>
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.02),
+    0 10px 30px rgba(0,0,0,0.25);
+}
 
-  </section>
+/* INFO CARD */
+.info-card {
+  padding: 2rem;
 
-  <!-- TABLE -->
-  <section class="table-section">
+  transition: 0.3s ease;
+}
 
-    <div class="section-header">
-      <h2>Disciplines & Expertise</h2>
-    </div>
+.info-card:hover {
+  transform: translateY(-6px);
 
-    <div class="table-container">
+  border-color: rgba(255,255,255,0.14);
 
-      <table>
+  background: #1c2028;
+}
 
-        <thead>
-          <tr>
-            <th>Discipline</th>
-            <th>Name</th>
-            <th>Experience</th>
-          </tr>
-        </thead>
+.info-card h2 {
+  margin-bottom: 1rem;
 
-        <tbody>
+  font-size: 1.4rem;
+}
 
-          <tr>
-            <td>Projects Director</td>
-            <td>Lovemore Munyaradzi</td>
-            <td>20 Years</td>
-          </tr>
+.info-card p {
+  color: rgba(255,255,255,0.7);
+}
 
-          <tr>
-            <td>Lead Design Architect</td>
-            <td>James Mwanjira</td>
-            <td>18 Years</td>
-          </tr>
+.full-width {
+  grid-column: 1 / -1;
+}
 
-          <tr>
-            <td>Design Engineer</td>
-            <td>Merriyard Mawimba</td>
-            <td>20 Years</td>
-          </tr>
+/* =========================
+   SECTION HEADERS
+========================= */
+.section-header {
+  text-align: center;
 
-          <tr>
-            <td>Project Manager</td>
-            <td>Innocent S. Jena</td>
-            <td>22 Years</td>
-          </tr>
+  margin-bottom: 3rem;
+}
 
-          <tr>
-            <td>Quantity Surveyor</td>
-            <td>Thuto Mokgothu</td>
-            <td>8 Years</td>
-          </tr>
+.section-header h2 {
+  font-size: 2.5rem;
 
-        </tbody>
+  margin-bottom: 1rem;
+}
 
-      </table>
+.section-header p {
+  color: rgba(255,255,255,0.65);
+}
 
-    </div>
+/* =========================
+   TEAM SECTION
+========================= */
+.team-section {
+  padding: 0 2rem 6rem;
+}
 
-  </section>
+.team-grid {
+  display: grid;
 
-  <!-- FOOTER -->
-  <footer>
-    © 2026 KALM-NTG. All rights reserved.
-  </footer>
+  grid-template-columns:
+    repeat(auto-fit, minmax(260px, 1fr));
 
-</body>
-</html>
+  gap: 1.5rem;
+
+  max-width: 1200px;
+
+  margin: auto;
+}
+
+/* TEAM CARD */
+.team-card {
+  padding: 2rem;
+
+  transition: 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+
+  background: #1c2028;
+
+  border-color: rgba(255,255,255,0.14);
+}
+
+.team-card h3 {
+  margin-bottom: 0.5rem;
+
+  font-size: 1.2rem;
+}
+
+.team-card span {
+  display: inline-block;
+
+  margin-bottom: 1rem;
+
+  color: #9ca3af;
+
+  font-size: 0.9rem;
+}
+
+.team-card p {
+  color: rgba(255,255,255,0.7);
+}
+
+/* =========================
+   TABLE SECTION
+========================= */
+.table-section {
+  padding: 0 2rem 6rem;
+}
+
+.table-container {
+  overflow-x: auto;
+
+  max-width: 1200px;
+
+  margin: auto;
+}
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+thead {
+  background: rgba(255,255,255,0.03);
+}
+
+th,
+td {
+  padding: 1.2rem;
+
+  text-align: left;
+}
+
+th {
+  color: white;
+}
+
+td {
+  color: rgba(255,255,255,0.72);
+}
+
+tr:not(:last-child) {
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  padding: 2rem;
+
+  text-align: center;
+
+  color: rgba(255,255,255,0.45);
+
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+
+  header {
+    padding: 1rem;
+  }
+
+  nav a {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.7rem;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+}
