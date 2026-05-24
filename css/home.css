@@ -1,157 +1,103 @@
-/* ================= RESET ================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:Arial;
+  background:#0f1115;
+  color:white;
 }
 
-html {
-  scroll-behavior: smooth;
+/* NAV */
+header{
+  position:fixed;
+  width:100%;
+  top:0;
+  display:flex;
+  justify-content:space-between;
+  padding:1rem 2rem;
+  background:rgba(15,17,21,.75);
+  backdrop-filter:blur(12px);
+  z-index:1000;
 }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #0f1115;
-  color: #fff;
-  line-height: 1.6;
+nav a{
+  color:rgba(255,255,255,.7);
+  margin-left:1.5rem;
+  text-decoration:none;
 }
 
-/* ================= NAV (GLOBAL STYLE) ================= */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 1rem 2rem;
-
-  background: rgba(15, 17, 21, 0.85);
-  backdrop-filter: blur(12px);
-
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  padding:0 8%;
+  background:url("../building.jpg") center/cover no-repeat;
+  position:relative;
 }
 
-.logo {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  letter-spacing: 2px;
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.55);
 }
 
-nav a {
-  color: rgba(255,255,255,0.7);
-  margin-left: 1.5rem;
-  text-decoration: none;
+.hero-content{position:relative;max-width:700px;}
+
+.hero h1{font-size:4rem;}
+
+.hero p{color:rgba(255,255,255,.7);margin:1rem 0;}
+
+.btn{
+  display:inline-block;
+  background:white;
+  color:black;
+  padding:.8rem 1.5rem;
+  text-decoration:none;
 }
 
-nav a:hover {
-  color: #fff;
+/* SECTIONS */
+.section{padding:6rem 8%;}
+
+.title{margin-bottom:2rem;font-size:2rem;}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:2rem;
 }
 
-/* ================= HERO (FIXED IMAGE) ================= */
-.hero {
-  height: 100vh;
-  width: 100%;
-
-  background: url("image/building.jpg") center/cover no-repeat;
-  position: relative;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.card{
+  background:#1a1d24;
+  border-radius:12px;
+  overflow:hidden;
 }
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
+.card img{width:100%;height:220px;object-fit:cover;}
+
+.card h3{padding:1rem;}
+
+.text-card{
+  background:#1a1d24;
+  padding:2rem;
+  border-radius:12px;
+  color:rgba(255,255,255,.7);
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
+/* FOOTER */
+.site-footer{
+  background:#0b0d10;
+  padding:4rem 2rem 2rem;
+  margin-top:5rem;
 }
 
-.hero-content h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
+.footer-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:2rem;
 }
 
-.hero-content a {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  background: #fff;
-  color: #000;
-  text-decoration: none;
-  border-radius: 8px;
-}
-
-/* ================= ACCORDION SECTION ================= */
-#accordion-section {
-  max-width: 900px;
-  margin: auto;
-  padding: 4rem 2rem;
-}
-
-details {
-  background: #1a1d24;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border-radius: 10px;
-}
-
-summary {
-  cursor: pointer;
-  font-weight: bold;
-}
-
-details p {
-  margin-top: 0.5rem;
-  color: rgba(255,255,255,0.7);
-}
-
-/* ================= FOOTER (FIXED ALIGNMENT) ================= */
-.site-footer {
-  background: #0b0d10;
-  padding: 4rem 2rem 2rem;
-  margin-top: 5rem;
-  text-align: left;
-}
-
-.footer-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-}
-
-.footer-col h3,
-.footer-col h4 {
-  margin-bottom: 1rem;
-}
-
-.footer-col p {
-  color: rgba(255,255,255,0.6);
-}
-
-.footer-bottom {
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(255,255,255,0.05);
-  color: rgba(255,255,255,0.4);
-  text-align: left;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
-
-  nav a {
-    margin-left: 1rem;
-  }
+.footer-bottom{
+  text-align:center;
+  margin-top:2rem;
+  color:rgba(255,255,255,.4);
 }
