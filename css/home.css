@@ -58,7 +58,7 @@ nav a:hover {
   padding: 0 8%;
 
   /* 🔥 IMPORTANT FIX: your image is in ROOT folder */
-  background: url("./building.jpg") center/cover no-repeat;
+  background: url("image/building.jpg") center/cover no-repeat;
 
   position: relative;
 }
