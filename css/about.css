@@ -8,7 +8,7 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   background: #0f1115;
-  color: white;
+  color: #ffffff;
   line-height: 1.6;
 }
 
@@ -16,61 +16,52 @@ body {
 header {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
+
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
   padding: 1rem 2rem;
-  background: rgba(15, 17, 21, 0.75);
+
+  background: rgba(15, 17, 21, 0.85);
   backdrop-filter: blur(12px);
+
   z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.logo {
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fff;
 }
 
 nav a {
   color: rgba(255,255,255,0.7);
   margin-left: 1.5rem;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 nav a:hover {
-  color: white;
+  color: #fff;
 }
 
-/* ================= HERO (NEW IMAGE) ================= */
+/* ================= HERO (IMAGE ONLY) ================= */
 .about-hero {
-  height: 70vh;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  position: relative;
-
+  height: 75vh;
   background: url("../image/about-hero.jpg") center/cover no-repeat;
+  margin-top: 70px;
 }
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.55);
+/* ================= PAGE WRAP ================= */
+.about-page {
+  padding-bottom: 4rem;
 }
 
-.hero-content {
-  position: relative;
-  max-width: 800px;
-  padding: 0 2rem;
-}
-
-.hero-content h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero-content p {
-  color: rgba(255,255,255,0.7);
-}
-
-/* ================= GRID ================= */
+/* ================= INFO GRID ================= */
 .about-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -82,12 +73,36 @@ nav a:hover {
   background: #1a1d24;
   padding: 2rem;
   border-radius: 14px;
+  transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.04);
 }
 
-/* ================= SECTION HEADER (CENTER FIX) ================= */
+.info-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255,255,255,0.1);
+}
+
+.info-card h2 {
+  margin-bottom: 1rem;
+}
+
+.info-card p {
+  color: rgba(255,255,255,0.7);
+}
+
+/* ================= SECTION HEADER ================= */
 .section-header {
   text-align: center;
   margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-header p {
+  color: rgba(255,255,255,0.6);
 }
 
 /* ================= TEAM ================= */
@@ -106,6 +121,12 @@ nav a:hover {
   padding: 1.5rem;
   border-radius: 14px;
   text-align: center;
+  transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
 }
 
 .team-card img {
@@ -114,6 +135,49 @@ nav a:hover {
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 1rem;
+}
+
+.team-card h3 {
+  margin-bottom: 0.3rem;
+}
+
+.team-card span {
+  color: rgba(255,255,255,0.6);
+}
+
+/* ================= TABLE ================= */
+.table-section {
+  padding: 4rem 8%;
+}
+
+.table-container {
+  overflow-x: auto;
+  background: #1a1d24;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+}
+
+th {
+  background: #14161b;
+  color: #fff;
+}
+
+td {
+  color: rgba(255,255,255,0.7);
+}
+
+tr {
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 /* ================= FOOTER ================= */
@@ -129,8 +193,37 @@ nav a:hover {
   gap: 2rem;
 }
 
+.footer-col h3,
+.footer-col h4 {
+  margin-bottom: 1rem;
+}
+
+.footer-col p {
+  color: rgba(255,255,255,0.6);
+}
+
 .footer-bottom {
   text-align: center;
   margin-top: 2rem;
   color: rgba(255,255,255,0.4);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
+    margin-left: 1rem;
+  }
+
+  .about-hero {
+    height: 55vh;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
 }
