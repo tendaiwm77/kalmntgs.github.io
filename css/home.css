@@ -1,178 +1,220 @@
-/* Reset all margins, paddings, and set box-sizing */
+/* ========== RESET ========== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body and global styles */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #000;
-  color: #f1f1f1;
-  line-height: 1.6;
+html {
+  scroll-behavior: smooth;
 }
 
-/* Header styles */
+/* ========== BASE ========== */
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  background: #0a0a0a;
+  color: #eaeaea;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+}
+
+/* ========== HEADER (GLASS STYLE) ========== */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #000;
-  color: #ffc800;
+
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(255, 200, 0, 0.2);
+
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .logo {
-  font-weight: bold;
-  font-size: 1.6rem;
-  user-select: none;
-}
-
-nav a {
-  margin-left: 1rem;
-  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
   color: #fff;
-  font-weight: 500;
-  transition: color 0.3s ease;
 }
 
-nav a:hover,
-nav a:focus {
-  color: #ffc800;
-  outline: none;
-}
-
-/* Hero section styles */
-.hero {
-  background-image: url('../building.jpg'); /* Make sure the path is correct */
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
+/* NAV */
+nav a {
+  margin-left: 1.2rem;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 400;
+  font-size: 0.95rem;
   position: relative;
+  transition: all 0.25s ease;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+/* subtle underline animation */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 1px;
+  background: #fff;
+  transition: width 0.25s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ========== HERO ========== */
+.hero {
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
   text-align: center;
+
+  position: relative;
+  overflow: hidden;
+
+  background: url("../building.jpg") center/cover no-repeat;
 }
 
-.hero-overlay {
+/* dark modern overlay */
+.hero::before {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 0;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0,0,0,0.4), rgba(0,0,0,0.85));
 }
 
+/* HERO CONTENT */
 .hero-content {
   position: relative;
-  color: #ffc800;
-  max-width: 90%;
-  padding: 0 1rem;
-  z-index: 1;
+  max-width: 800px;
+  padding: 0 1.5rem;
+  z-index: 2;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: -1px;
   margin-bottom: 1rem;
-  line-height: 1.1;
 }
 
+.hero-content p {
+  color: rgba(255,255,255,0.7);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* BUTTON */
 .hero-content a.btn-primary {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #ffc800;
+  padding: 0.8rem 1.6rem;
+
+  background: #ffffff;
   color: #000;
+
   text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background 0.3s ease;
-  cursor: pointer;
-  user-select: none;
+  border-radius: 999px;
+
+  font-weight: 500;
+  font-size: 0.95rem;
+
+  transition: all 0.25s ease;
 }
 
-.hero-content a.btn-primary:hover,
-.hero-content a.btn-primary:focus {
-  background-color: #e6b800;
-  outline: none;
+.hero-content a.btn-primary:hover {
+  transform: translateY(-2px);
+  background: #eaeaea;
 }
 
-/* Accordion section */
+/* ========== ACCORDION (MODERN CARD STYLE) ========== */
 #accordion-section {
-  padding: 3rem 2rem;
-  max-width: 800px;
-  margin: 3rem auto;
+  padding: 4rem 1.5rem;
+  max-width: 850px;
+  margin: 0 auto;
 }
 
 #accordion-section h2 {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   font-size: 2rem;
-  color: #ffc800;
-  user-select: none;
-}
-
-details {
-  margin-bottom: 1rem;
-  background-color: #1a1a1a;
-  border: 1px solid #333;
-  padding: 1rem;
-  border-radius: 5px;
-  color: #ffc800;
-}
-
-details summary {
-  font-weight: bold;
-  cursor: pointer;
-  outline: none;
-  list-style: none;
-}
-
-details[open] summary {
+  font-weight: 600;
   color: #fff;
 }
 
-details summary::-webkit-details-marker {
-  display: none; /* Hide default arrow */
+details {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+
+  transition: all 0.25s ease;
 }
 
-details summary::before {
-  content: "▶ ";
-  display: inline-block;
-  transition: transform 0.3s ease;
+details:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
 }
 
-details[open] summary::before {
-  transform: rotate(90deg);
+summary {
+  cursor: pointer;
+  font-weight: 500;
+  color: #fff;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+summary::-webkit-details-marker {
+  display: none;
 }
 
 details p {
-  margin-top: 0.5rem;
-  color: #ccc;
-  line-height: 1.4;
+  margin-top: 0.8rem;
+  color: rgba(255,255,255,0.65);
+  font-size: 0.95rem;
 }
 
-/* Footer styles */
+/* arrow */
+summary::after {
+  content: "+";
+  color: rgba(255,255,255,0.5);
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+details[open] summary::after {
+  transform: rotate(45deg);
+}
+
+/* ========== FOOTER ========== */
 footer {
   text-align: center;
-  padding: 2rem;
-  background: #000;
-  color: #888;
-  user-select: none;
+  padding: 3rem 1rem;
+  color: rgba(255,255,255,0.4);
+  font-size: 0.9rem;
 }
 
-/* Scroll fade-in animation */
+/* ========== FADE IN ========== */
 .fade-in-section {
   opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s ease-out;
+  transform: translateY(16px);
+  transition: all 0.7s ease;
 }
 
 .fade-in-section.visible {
@@ -180,18 +222,18 @@ footer {
   transform: translateY(0);
 }
 
-/* Responsive styles */
+/* ========== MOBILE ========== */
 @media (max-width: 600px) {
-  .hero-content h1 {
-    font-size: 2rem;
+  header {
+    padding: 1rem;
   }
 
   nav a {
-    margin-left: 0.5rem;
+    margin-left: 0.8rem;
+    font-size: 0.9rem;
   }
 
-  #accordion-section {
-    padding: 2rem 1rem;
-    margin: 2rem 1rem;
+  .hero-content p {
+    font-size: 1rem;
   }
 }
