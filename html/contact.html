@@ -1,64 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact – KALM-NTG</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/contact.css">
 </head>
+
 <body>
 
-<!-- Navigation -->
-<nav>
-  <div class="logo">KALM-NTG</div>
+<!-- ================= NAV ================= -->
+<header>
+
+  <a href="../index.html" class="logo">KALM-NTG</a>
+
   <div class="menu-toggle" id="menu-toggle">☰</div>
-  <ul id="nav-links">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html" class="active">Contact</a></li>
-  </ul>
-</nav>
 
-<!-- Contact Section -->
-<section class="container">
-  <h2 class="animate-slide-in">Contact Us</h2>
-  <p class="description animate-fade-in">
-    Have questions or want to work with us? Fill out the form and we’ll get back to you shortly.
-  </p>
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
 
-  <!-- Contact Form -->
-  <form action="https://formspree.io/f/your_form_id" method="POST" class="animate-fade-in-up">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+</header>
 
-  <!-- Company Details -->
-  <div class="contact-info animate-fade-in-up">
-    <h3>Company Information</h3>
-    <p><strong>Company Registration No:</strong> 2012/175002/07</p>
-    <p><strong>Tax Registration No:</strong> 9469135173</p>
-    <p><strong>VAT Registration No:</strong> 4500294139</p>
+<!-- ================= CONTACT SECTION ================= -->
+<main class="contact-page">
 
-    <h3>Head Office – Mahikeng</h3>
-    <p>25 Churchill Street, Golview Mafikeng Il Site 2745</p>
-    <p>Postnet Suite 071, Private Bag X2230</p>
-    <p>Mafikeng South, 2791</p>
+  <section class="contact-hero">
+    <h1>Contact Us</h1>
+    <p>Let’s build something great together</p>
+  </section>
 
-    <h3>Johannesburg Office</h3>
-    <p>37 Meyer Street, Triomf 2092, Johannesburg</p>
+  <!-- FORM + INFO GRID -->
+  <section class="contact-grid">
 
-    <h3>Contact Numbers</h3>
-    <p>Cell: 076 317 9459 / 073 152 4714</p>
+    <!-- FORM -->
+    <div class="contact-card">
 
-    <h3>Email</h3>
-    <p>kalmntgarch@gmail.com</p>
+      <h2>Send a Message</h2>
+
+      <form action="https://formspree.io/f/your_form_id" method="POST">
+
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+
+      </form>
+
+    </div>
+
+    <!-- COMPANY INFO -->
+    <div class="contact-card">
+
+      <h2>Company Information</h2>
+
+      <p><strong>Reg No:</strong> 2012/175002/07</p>
+      <p><strong>Tax No:</strong> 9469135173</p>
+      <p><strong>VAT No:</strong> 4500294139</p>
+
+      <hr>
+
+      <h3>Head Office</h3>
+      <p>25 Churchill Street, Mahikeng</p>
+
+      <h3>Johannesburg Office</h3>
+      <p>37 Meyer Street, Triomf</p>
+
+      <h3>Contact</h3>
+      <p>076 317 9459 / 073 152 4714</p>
+      <p>kalmntgarch@gmail.com</p>
+
+    </div>
+
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+
+  <div class="footer-container">
+
+    <div class="footer-col">
+      <h3>KALM-NTG</h3>
+      <p>Architecture • Engineering • Project Management</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>076 317 9459</p>
+      <p>kalmntgarch@gmail.com</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Offices</h4>
+      <p>Mahikeng</p>
+      <p>Johannesburg</p>
+    </div>
+
   </div>
-</section>
 
-<script src="../js/contact.js"></script>
+  <div class="footer-bottom">
+    © 2026 KALM-NTG Architects
+  </div>
+
+</footer>
+
 </body>
 </html>
