@@ -1,319 +1,242 @@
-/* =========================
-   RESET
-========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* =========================
-   BODY
-========================= */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #eef2f6;
-  color: #111827;
-  line-height: 1.7;
-}
-
-/* =========================
-   HEADER
-========================= */
-header {
-  position: sticky;
-  top: 0;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 1rem 2rem;
-
-  background: rgba(255, 255, 255, 0.8);
-
-  backdrop-filter: blur(12px);
-
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-
-  z-index: 1000;
-}
-
-.logo a {
-  color: #111827;
-  text-decoration: none;
-
-  font-size: 1.3rem;
-  font-weight: bold;
-
-  letter-spacing: 1px;
-}
-
-nav a {
-  color: #4b5563;
-
-  text-decoration: none;
-
-  margin-left: 1.5rem;
-
-  transition: 0.3s ease;
-}
-
-nav a:hover {
-  color: #111827;
-}
-
-/* =========================
-   HERO
-========================= */
-.about-hero {
-  padding: 8rem 2rem 5rem;
-
-  text-align: center;
-
-  max-width: 1000px;
-  margin: auto;
-}
-
-.small-text {
-  color: #6b7280;
-
-  letter-spacing: 3px;
-
-  margin-bottom: 1rem;
-
-  font-size: 0.85rem;
-}
-
-.hero-content h1 {
-  font-size: 4rem;
-
-  line-height: 1.1;
-
-  margin-bottom: 1.5rem;
-
-  color: #111827;
-}
-
-.hero-description {
-  color: #4b5563;
-
-  font-size: 1.1rem;
-
-  max-width: 720px;
-
-  margin: auto;
-}
-
-/* =========================
-   ABOUT GRID
-========================= */
-.about-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(auto-fit, minmax(320px, 1fr));
-
-  gap: 1.5rem;
-
-  max-width: 1200px;
-
-  margin: auto;
-
-  padding: 0 2rem 6rem;
-}
-
-/* =========================
-   CARDS
-========================= */
-.info-card,
-.team-card,
-.table-container {
-  background: #ffffff;
-
-  border: 1px solid rgba(0, 0, 0, 0.06);
-
-  border-radius: 24px;
-
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.05);
-
-  transition: 0.3s ease;
-}
-
-.info-card:hover,
-.team-card:hover {
-  transform: translateY(-6px);
-
-  box-shadow:
-    0 18px 40px rgba(0, 0, 0, 0.08);
-}
-
-/* INFO CARD */
-.info-card {
-  padding: 2rem;
-}
-
-.info-card h2 {
-  margin-bottom: 1rem;
-
-  color: #111827;
-}
-
-.info-card p {
-  color: #4b5563;
-}
-
-.full-width {
-  grid-column: 1 / -1;
-}
-
-/* =========================
-   SECTION HEADERS
-========================= */
-.section-header {
-  text-align: center;
-
-  margin-bottom: 3rem;
-}
-
-.section-header h2 {
-  font-size: 2.5rem;
-
-  margin-bottom: 1rem;
-
-  color: #111827;
-}
-
-.section-header p {
-  color: #6b7280;
-}
-
-/* =========================
-   TEAM SECTION
-========================= */
-.team-section {
-  padding: 0 2rem 6rem;
-}
-
-.team-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(auto-fit, minmax(260px, 1fr));
-
-  gap: 1.5rem;
-
-  max-width: 1200px;
-
-  margin: auto;
-}
-
-.team-card {
-  padding: 2rem;
-}
-
-.team-card h3 {
-  margin-bottom: 0.5rem;
-
-  color: #111827;
-}
-
-.team-card span {
-  display: inline-block;
-
-  margin-bottom: 1rem;
-
-  color: #6b7280;
-
-  font-size: 0.9rem;
-}
-
-.team-card p {
-  color: #4b5563;
-}
-
-/* =========================
-   TABLE
-========================= */
-.table-section {
-  padding: 0 2rem 6rem;
-}
-
-.table-container {
-  overflow-x: auto;
-
-  max-width: 1200px;
-
-  margin: auto;
-}
-
-table {
-  width: 100%;
-
-  border-collapse: collapse;
-}
-
-thead {
-  background: #f8fafc;
-}
-
-th,
-td {
-  padding: 1.2rem;
-
-  text-align: left;
-}
-
-th {
-  color: #111827;
-}
-
-td {
-  color: #4b5563;
-}
-
-tr:not(:last-child) {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-/* =========================
-   FOOTER
-========================= */
-footer {
-  padding: 2rem;
-
-  text-align: center;
-
-  color: #6b7280;
-
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 768px) {
-
-  header {
-    padding: 1rem;
-  }
-
-  nav a {
-    margin-left: 1rem;
-    font-size: 0.9rem;
-  }
-
-  .hero-content h1 {
-    font-size: 2.7rem;
-  }
-
-  .section-header h2 {
-    font-size: 2rem;
-  }
-
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>About | KALM-NTG</title>
+
+  <link rel="stylesheet" href="../css/about.css" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <a href="../index.html">KALM-NTG</a>
+    </div>
+
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="about-hero">
+
+    <div class="hero-content">
+      <p class="small-text">ABOUT US</p>
+
+      <h1>
+        Designing spaces that shape
+        tomorrow.
+      </h1>
+
+      <p class="hero-description">
+        KALM-NTG Architects is a multidisciplinary
+        practice focused on architecture,
+        engineering, project management,
+        and sustainable innovation.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- ABOUT CONTENT -->
+  <main>
+
+    <section class="about-grid">
+
+      <div class="info-card">
+        <h2>Introduction</h2>
+
+        <p>
+          Thank you for considering KALM-NTG
+          Architects for your professional service
+          needs. We provide tailored solutions
+          built around precision, flexibility,
+          and long-term value.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h2>The Company</h2>
+
+        <p>
+          Our multidisciplinary practice combines
+          expertise in Architecture, Civil &
+          Structural Engineering, Quantity
+          Surveying, and Project Management.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h2>Vision</h2>
+
+        <p>
+          We believe good design improves quality
+          of life. Our vision is to create impactful,
+          sustainable spaces while driving inclusive
+          growth and innovation.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h2>Mission</h2>
+
+        <p>
+          We are committed to design excellence,
+          environmental responsibility, and
+          efficient project delivery across every
+          stage of development.
+        </p>
+      </div>
+
+      <div class="info-card full-width">
+        <h2>Company Background</h2>
+
+        <p>
+          Established in 2012, KALM-NTG Architects
+          is a South African 100% B-BBEE black-owned
+          practice founded by passionate professionals
+          focused on delivering modern, innovative,
+          and client-centered solutions.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- TEAM -->
+    <section class="team-section">
+
+      <div class="section-header">
+        <h2>Leadership Team</h2>
+
+        <p>
+          Experienced professionals driving the
+          vision behind KALM-NTG.
+        </p>
+      </div>
+
+      <div class="team-grid">
+
+        <div class="team-card">
+          <h3>Lovemore A. Munyaradzi</h3>
+          <span>Managing Director</span>
+
+          <p>
+            Over 20 years of architectural
+            leadership and project execution
+            experience.
+          </p>
+        </div>
+
+        <div class="team-card">
+          <h3>James Mwanjira</h3>
+          <span>Director Associate</span>
+
+          <p>
+            Design-focused architect known for
+            strong conceptual thinking and
+            detail-driven execution.
+          </p>
+        </div>
+
+        <div class="team-card">
+          <h3>Thuto Mokgothu</h3>
+          <span>Quantity Surveying Director</span>
+
+          <p>
+            Leads the quantity surveying unit
+            with expertise in construction
+            project management.
+          </p>
+        </div>
+
+        <div class="team-card">
+          <h3>Seolebaleng G. Ramakepe</h3>
+          <span>Associate</span>
+
+          <p>
+            Specialist in technical coordination,
+            design execution, and construction
+            management.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- DISCIPLINES -->
+    <section class="table-section">
+
+      <div class="section-header">
+        <h2>Disciplines & Expertise</h2>
+      </div>
+
+      <div class="table-container">
+
+        <table>
+
+          <thead>
+            <tr>
+              <th>Discipline</th>
+              <th>Name</th>
+              <th>Experience</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td>Projects Director</td>
+              <td>Lovemore Munyaradzi</td>
+              <td>20 Years</td>
+            </tr>
+
+            <tr>
+              <td>Lead Design Architect</td>
+              <td>James Mwanjira</td>
+              <td>18 Years</td>
+            </tr>
+
+            <tr>
+              <td>Design Engineer</td>
+              <td>Merriyard Mawimba</td>
+              <td>20 Years</td>
+            </tr>
+
+            <tr>
+              <td>Project Manager</td>
+              <td>Innocent S. Jena</td>
+              <td>22 Years</td>
+            </tr>
+
+            <tr>
+              <td>Quantity Surveyor</td>
+              <td>Thuto Mokgothu</td>
+              <td>8 Years</td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 KALM-NTG. All rights reserved.
+  </footer>
+
+</body>
+</html>
