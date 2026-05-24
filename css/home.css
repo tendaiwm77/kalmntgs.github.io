@@ -16,7 +16,7 @@ body {
   line-height: 1.6;
 }
 
-/* ================= NAV ================= */
+/* ================= NAV (GLOBAL STYLE) ================= */
 header {
   position: sticky;
   top: 0;
@@ -35,38 +35,33 @@ header {
 }
 
 .logo {
-  font-weight: bold;
-  letter-spacing: 2px;
   color: #fff;
   text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 nav a {
+  color: rgba(255,255,255,0.7);
   margin-left: 1.5rem;
   text-decoration: none;
-  color: rgba(255,255,255,0.7);
-  transition: 0.3s;
 }
 
 nav a:hover {
   color: #fff;
 }
 
-/* ================= HERO ================= */
+/* ================= HERO (FIXED IMAGE) ================= */
 .hero {
   height: 100vh;
   width: 100%;
 
-  background-image: url("image/building.jpg"); /* FIXED PATH */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url("image/building.jpg") center/cover no-repeat;
+  position: relative;
 
   display: flex;
   align-items: center;
   justify-content: center;
-
-  position: relative;
 }
 
 .hero-overlay {
@@ -84,33 +79,22 @@ nav a:hover {
 .hero-content h1 {
   font-size: 3.5rem;
   margin-bottom: 1rem;
-  color: #fff;
 }
 
-.hero-content a.btn-primary {
+.hero-content a {
   display: inline-block;
   padding: 0.8rem 1.5rem;
   background: #fff;
   color: #000;
   text-decoration: none;
   border-radius: 8px;
-  font-weight: bold;
-  transition: 0.3s;
 }
 
-.hero-content a.btn-primary:hover {
-  background: #dcdcdc;
-}
-
-/* ================= SECTIONS ================= */
-section {
-  padding: 4rem 2rem;
-}
-
-/* ================= ACCORDION / INFO SECTION ================= */
+/* ================= ACCORDION SECTION ================= */
 #accordion-section {
   max-width: 900px;
   margin: auto;
+  padding: 4rem 2rem;
 }
 
 details {
@@ -118,13 +102,11 @@ details {
   margin-bottom: 1rem;
   padding: 1rem;
   border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.05);
 }
 
 summary {
   cursor: pointer;
   font-weight: bold;
-  color: #fff;
 }
 
 details p {
@@ -137,20 +119,13 @@ details p {
   background: #0b0d10;
   padding: 4rem 2rem 2rem;
   margin-top: 5rem;
-
-  text-align: left; /* IMPORTANT FIX */
+  text-align: left;
 }
 
 .footer-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
-
-  text-align: left;
-}
-
-.footer-col {
-  text-align: left;
 }
 
 .footer-col h3,
@@ -166,9 +141,8 @@ details p {
   margin-top: 2rem;
   padding-top: 1rem;
   border-top: 1px solid rgba(255,255,255,0.05);
-
-  text-align: left;
   color: rgba(255,255,255,0.4);
+  text-align: left;
 }
 
 /* ================= RESPONSIVE ================= */
