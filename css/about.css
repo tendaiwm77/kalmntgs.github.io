@@ -153,7 +153,9 @@ nav a:hover {
     0 18px 40px rgba(0, 0, 0, 0.08);
 }
 
-/* INFO CARD */
+/* =========================
+   INFO CARD
+========================= */
 .info-card {
   padding: 2rem;
 }
@@ -213,14 +215,19 @@ nav a:hover {
   margin: auto;
 }
 
+/* =========================
+   TEAM CARDS
+========================= */
 .team-card {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .team-card h3 {
   margin-bottom: 0.5rem;
 
   color: #111827;
+
+  font-size: 1.2rem;
 }
 
 .team-card span {
@@ -235,6 +242,22 @@ nav a:hover {
 
 .team-card p {
   color: #4b5563;
+}
+
+/* =========================
+   TEAM IMAGES
+========================= */
+.team-card img {
+  width: 100%;
+  height: 260px;
+
+  object-fit: cover;
+
+  border-radius: 18px;
+
+  margin-bottom: 1.2rem;
+
+  display: block;
 }
 
 /* =========================
@@ -314,6 +337,10 @@ footer {
 
   .section-header h2 {
     font-size: 2rem;
+  }
+
+  .team-card img {
+    height: 220px;
   }
 
 }
