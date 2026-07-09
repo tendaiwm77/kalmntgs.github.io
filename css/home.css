@@ -1,3 +1,19 @@
+/* ================= ROOT ================= */
+:root {
+  --bg-main: #0f1115;
+  --bg-secondary: #111318;
+  --bg-footer: #0b0d10;
+
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-muted: rgba(255, 255, 255, 0.5);
+
+  --accent: #ffffff;
+  --border: rgba(255, 255, 255, 0.08);
+
+  --radius: 8px;
+}
+
 /* ================= RESET ================= */
 * {
   margin: 0;
@@ -5,10 +21,12 @@
   box-sizing: border-box;
 }
 
+/* ================= BASE ================= */
 body {
-  font-family: "Segoe UI", sans-serif;
-  background: #0f1115;
-  color: #fff;
+  font-family: Arial, "Segoe UI", sans-serif; /* safer fallback */
+  background: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.6;
 }
 
 /* ================= NAV ================= */
@@ -18,37 +36,44 @@ header {
   width: 100%;
   z-index: 1000;
 
+  background: rgba(15, 17, 21, 0.9); /* safer than blur */
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 1.2rem 2rem;
-
-  background: rgba(15,17,21,0.7);
-  backdrop-filter: blur(15px);
+  padding: 1rem 0;
 }
 
 .logo {
-  color: white;
   text-decoration: none;
+  color: var(--text-primary);
   font-weight: bold;
   letter-spacing: 2px;
 }
 
 nav a {
   margin-left: 1.5rem;
-  color: rgba(255,255,255,0.7);
+  color: var(--text-secondary);
   text-decoration: none;
+  transition: 0.3s;
 }
 
 nav a:hover {
-  color: white;
+  color: var(--text-primary);
 }
 
 /* ================= HERO ================= */
 .hero {
   height: 100vh;
-  background: url("../image/building.jpg") center/cover no-repeat;
+  background: url("image/building.jpg") center/cover no-repeat; /* FIXED PATH */
   position: relative;
 
   display: flex;
@@ -60,30 +85,37 @@ nav a:hover {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0,0,0,0.6);
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
+  padding: 0 1rem;
 }
 
 .hero h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
 .hero p {
-  color: rgba(255,255,255,0.7);
+  color: var(--text-secondary);
   margin-bottom: 2rem;
 }
 
 .hero a {
-  padding: 0.9rem 1.6rem;
-  background: white;
-  color: black;
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: var(--accent);
+  color: #000;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: var(--radius);
+  transition: 0.3s;
+}
+
+.hero a:hover {
+  opacity: 0.85;
 }
 
 /* ================= FEATURE STRIP ================= */
@@ -91,29 +123,28 @@ nav a:hover {
   display: flex;
   justify-content: space-around;
   padding: 2rem;
-  background: #111318;
+  background: var(--bg-secondary);
+  color: var(--text-muted);
   font-size: 0.9rem;
-  color: rgba(255,255,255,0.6);
 }
 
 /* ================= SHOWCASE ================= */
 .showcase {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0;
 }
 
 .showcase-item {
   position: relative;
+  height: 400px;
   overflow: hidden;
-  height: 450px;
 }
 
 .showcase-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: 0.5s;
+  transition: 0.4s;
 }
 
 .showcase-item:hover img {
@@ -124,15 +155,13 @@ nav a:hover {
   position: absolute;
   bottom: 20px;
   left: 20px;
-  font-size: 1.3rem;
-  font-weight: 500;
+  font-size: 1.2rem;
 }
 
 /* ================= FOOTER ================= */
 .site-footer {
-  background: #0b0d10;
-  padding: 4rem 2rem 2rem;
-  margin-top: 0;
+  background: var(--bg-footer);
+  padding: 3rem 2rem;
 }
 
 .footer-container {
@@ -142,14 +171,16 @@ nav a:hover {
 }
 
 .footer-col p {
-  color: rgba(255,255,255,0.6);
+  color: var(--text-muted);
 }
 
 .footer-bottom {
   margin-top: 2rem;
+  border-top: 1px solid var(--border);
   padding-top: 1rem;
-  border-top: 1px solid rgba(255,255,255,0.05);
-  color: rgba(255,255,255,0.4);
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -158,13 +189,17 @@ nav a:hover {
     grid-template-columns: 1fr;
   }
 
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-
   .feature-strip {
     flex-direction: column;
-    gap: 1rem;
     text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
   }
 }
