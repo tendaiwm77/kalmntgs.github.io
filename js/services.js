@@ -1,22 +1,27 @@
-const items = document.querySelectorAll(".service-item");
+const services = document.querySelectorAll(".service");
 
-items.forEach(item => {
-    item.querySelector(".service-header").addEventListener("click", () => {
+services.forEach(service => {
+    const header = service.querySelector(".service-header");
+    const content = service.querySelector(".service-content");
+    const toggle = service.querySelector(".toggle");
 
-        items.forEach(i => {
-            if (i !== item) i.classList.remove("active");
+    header.addEventListener("click", () => {
+
+        const isOpen = content.style.display === "flex";
+
+        // close all
+        document.querySelectorAll(".service-content").forEach(c => {
+            c.style.display = "none";
         });
 
-        item.classList.toggle("active");
-    });
-});
+        document.querySelectorAll(".toggle").forEach(t => {
+            t.textContent = "+";
+        });
 
-/* SCROLL ANIMATION */
-window.addEventListener("scroll", () => {
-    items.forEach(item => {
-        const top = item.getBoundingClientRect().top;
-        if (top < window.innerHeight - 50) {
-            item.classList.add("show");
+        // open clicked
+        if (!isOpen) {
+            content.style.display = "flex";
+            toggle.textContent = "−";
         }
     });
 });
