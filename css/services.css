@@ -2,89 +2,58 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: Arial, sans-serif;
 }
 
-/* PAGE FIX */
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.services {
-  flex: 1;
-}
-
-/* NAV */
-.navbar {
-  background: #8B0000;
+  background: #0f172a;
   color: white;
-  padding: 15px 40px;
 }
 
 /* HERO */
 .hero {
-  height: 70vh;
+  height: 60vh;
+
+  /* ✅ THIS WAS LIKELY YOUR BROKEN PART */
   background: url("../image/building.jpg") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
   position: relative;
 }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
+.overlay {
   background: rgba(0,0,0,0.6);
-}
-
-.hero-content {
-  position: relative;
-  color: white;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
-  padding: 40px;
 }
 
-.hero-content h1 {
+.overlay h1 {
   font-size: 3rem;
 }
 
-/* SERVICES */
+.overlay p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+/* GRID */
 .services {
-  padding: 80px 40px;
-  background: #f5f5f5;
-  text-align: center;
-}
-
-.subtitle {
-  color: #8B0000;
-}
-
-.cards {
+  padding: 50px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
 }
 
 /* CARD */
 .card {
-  background: white;
-  border-radius: 15px;
+  background: #1e293b;
+  border-radius: 10px;
   overflow: hidden;
-  text-decoration: none;
-  color: black;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   transition: 0.3s;
-  transform: translateY(20px);
-  opacity: 0;
-}
-
-.card.show {
-  transform: translateY(0);
-  opacity: 1;
 }
 
 .card:hover {
@@ -93,33 +62,11 @@ body {
 
 .card img {
   width: 100%;
-  height: 200px;
+  height: 180px;
   object-fit: cover;
 }
 
-.card-content {
-  padding: 20px;
-}
-
-.card h3 {
-  color: #8B0000;
-}
-
-/* FOOTER */
-.site-footer {
-  background: #8B0000;
-  color: white;
-  padding: 40px 20px;
-  margin-top: auto;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 20px;
+.card h2 {
+  padding: 15px;
+  font-size: 1.2rem;
 }
