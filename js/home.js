@@ -1,30 +1,18 @@
-// Fade-in animation for elements with the class 'fade-in-section'
-document.addEventListener('DOMContentLoaded', () => {
-  const faders = document.querySelectorAll('.fade-in-section');
+// HOME PAGE SCRIPT
 
-  // Options for the IntersectionObserver
-  const appearOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px"
-  };
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("Home page loaded");
 
-  // Callback for when elements enter viewport
-  const appearOnScroll = (entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
+    // Optional: smooth scroll (future use)
+    document.querySelectorAll("a[href^='#']").forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({
+                    behavior: "smooth"
+                });
+            }
+        });
     });
-  };
-
-  // Check if browser supports IntersectionObserver
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(appearOnScroll, appearOptions);
-    faders.forEach(fader => observer.observe(fader));
-  } else {
-    // Fallback: make all fade-in sections visible immediately
-    faders.forEach(fader => fader.classList.add('visible'));
-  }
 });
-
