@@ -2,23 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KALM-NTG</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- ================= NAVBAR ================= -->
 <header>
-    ...
+    <div class="logo">KALM.Ntg</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="html/about.html">About</a>
+        <a href="html/services.html">Services</a>
+        <a href="html/contact.html">Contact</a>
+    </nav>
 </header>
 
-<!-- PAGE CONTENT -->
-<section>
-    ...
+<!-- ================= HERO ================= -->
+<section class="hero">
+    <div class="overlay"></div>
+
+    <div class="hero-text">
+        <h1>Architecture. Engineering. Precision.</h1>
+        <p>Designing spaces that define the future.</p>
+        <a href="html/services.html" class="btn">Explore Services</a>
+    </div>
 </section>
 
-<!-- FOOTER (ALWAYS LAST INSIDE BODY) -->
+<!-- ================= SERVICES ================= -->
+<section class="services">
+    <h2>Our Services</h2>
+
+    <div class="service-grid">
+
+        <a href="html/services.html#architecture" class="card">
+            <img src="image/residential_architecture.jpg" alt="Architecture" loading="lazy">
+            <h3>Architecture</h3>
+        </a>
+
+        <a href="html/services.html#engineering" class="card">
+            <img src="image/civil-engineering.jpg" alt="Engineering" loading="lazy">
+            <h3>Engineering</h3>
+        </a>
+
+        <a href="html/services.html#project" class="card">
+            <img src="image/project-management.jpg" alt="Project Management" loading="lazy">
+            <h3>Project Management</h3>
+        </a>
+
+        <a href="html/services.html#quantity" class="card">
+            <img src="image/quantity-surveying.jpg" alt="Quantity Surveying" loading="lazy">
+            <h3>Quantity Surveying</h3>
+        </a>
+
+    </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="about">
+    <h2>Who We Are</h2>
+    <p>
+        KALM-NTG is a multidisciplinary firm delivering innovative,
+        cost-effective and sustainable solutions across architecture,
+        engineering and project management.
+    </p>
+</section>
+
+<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
 
   <div class="footer-container">
@@ -48,6 +102,9 @@
   </div>
 
 </footer>
+
+<!-- JS -->
+<script src="js/home.js"></script>
 
 </body>
 </html>
