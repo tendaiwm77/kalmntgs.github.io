@@ -5,7 +5,7 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* PAGE STRUCTURE */
+/* PAGE FIX */
 body {
   display: flex;
   flex-direction: column;
@@ -26,7 +26,7 @@ body {
 /* HERO */
 .hero {
   height: 70vh;
-  background: url("../image/architecture.jpg") center/cover no-repeat;
+  background: url("../image/building.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,7 +109,7 @@ body {
 .site-footer {
   background: #8B0000;
   color: white;
-  padding: 40px 20px 20px;
+  padding: 40px 20px;
   margin-top: auto;
 }
 
