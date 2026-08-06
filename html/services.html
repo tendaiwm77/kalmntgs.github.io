@@ -1,50 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services | KALM-NTG</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | KALM-NTG</title>
 
-  <link rel="stylesheet" href="/css/services.css">
+    <link rel="stylesheet" href="../css/services.css">
 </head>
 
 <body>
 
+<!-- ================= NAVBAR ================= -->
 <header>
-  <a href="/index.html" class="logo">KALM-NTG</a>
-
-  <nav>
-    <a href="/index.html">Home</a>
-    <a href="/html/about.html">About</a>
-    <a href="/html/services.html">Services</a>
-    <a href="/html/contact.html">Contact</a>
-  </nav>
+    <div class="logo">KALM.Ntg</div>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 </header>
 
-<section class="services">
-  <h2 class="title">Our Services</h2>
-
-  <div class="service-grid">
-
-    <div class="service-card">
-      <img src="/image/plans.jpg">
-      <h3>Architectural Designing</h3>
-    </div>
-
-    <div class="service-card">
-      <img src="/image/quantity-surveying.jpg">
-      <h3>Quantity Surveying</h3>
-    </div>
-
-    <div class="service-card">
-      <img src="/image/project-management.jpg">
-      <h3>Project Management</h3>
-    </div>
-
-  </div>
+<!-- ================= HERO ================= -->
+<section class="services-hero">
+    <h1>Our Services</h1>
+    <p>Click each service to learn more</p>
 </section>
 
+<!-- ================= SERVICES DROPDOWN ================= -->
+<section class="services-container">
+
+    <!-- Architecture -->
+    <div class="service-item" id="architecture">
+        <div class="service-header">
+            <h2>Architecture</h2>
+            <span>+</span>
+        </div>
+        <div class="service-content">
+            <img src="../image/residential_architecture.jpg" alt="Architecture" loading="lazy">
+            <p>We design modern, functional and sustainable buildings tailored to client needs, from residential to commercial developments.</p>
+        </div>
+    </div>
+
+    <!-- Engineering -->
+    <div class="service-item" id="engineering">
+        <div class="service-header">
+            <h2>Engineering</h2>
+            <span>+</span>
+        </div>
+        <div class="service-content">
+            <img src="../image/civil-engineering.jpg" alt="Engineering" loading="lazy">
+            <p>Our engineering solutions ensure structural integrity, efficiency, and compliance with industry standards.</p>
+        </div>
+    </div>
+
+    <!-- Project Management -->
+    <div class="service-item" id="project">
+        <div class="service-header">
+            <h2>Project Management</h2>
+            <span>+</span>
+        </div>
+        <div class="service-content">
+            <img src="../image/project-management.jpg" alt="Project Management" loading="lazy">
+            <p>We manage projects from concept to completion, ensuring timelines, budgets, and quality are maintained.</p>
+        </div>
+    </div>
+
+    <!-- Quantity Surveying -->
+    <div class="service-item" id="quantity">
+        <div class="service-header">
+            <h2>Quantity Surveying</h2>
+            <span>+</span>
+        </div>
+        <div class="service-content">
+            <img src="../image/quantity-surveying.jpg" alt="Quantity Surveying" loading="lazy">
+            <p>We provide accurate cost estimation, budgeting, and financial control for construction projects.</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
+
   <div class="footer-container">
 
     <div class="footer-col">
@@ -70,7 +108,10 @@
   <div class="footer-bottom">
     © 2026 KALM-NTG Architects
   </div>
+
 </footer>
+
+<script src="../js/services.js"></script>
 
 </body>
 </html>
