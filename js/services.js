@@ -1,4 +1,3 @@
-// Fade-in cards on scroll
 const cards = document.querySelectorAll(".card");
 
 const observer = new IntersectionObserver(entries => {
