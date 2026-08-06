@@ -1,101 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services | KALM-NTG</title>
-
-<link rel="stylesheet" href="../css/services.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | KALM-NTG</title>
+    <link rel="stylesheet" href="services.css">
 </head>
+
 <body>
 
-<header>
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
     <div class="logo">KALM.Ntg</div>
     <nav>
-        <a href="../index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html" class="active">Services</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <a href="services.html">Services</a>
+        <a href="#">Contact</a>
     </nav>
 </header>
 
-<section class="hero">
-    <h1>Our Services</h1>
-    <p>Click a service to explore</p>
+<!-- ================= HERO ================= -->
+<section class="services-hero">
+    <div class="overlay">
+        <h1>Our Services</h1>
+    </div>
 </section>
 
-<section class="services">
+<!-- ================= SERVICES ================= -->
+<section class="services-container">
 
-    <!-- ITEM -->
-    <div class="service-item">
+    <!-- ARCHITECTURE -->
+    <div class="service">
         <div class="service-header">
             <h2>Architectural Designing</h2>
-            <span class="icon">+</span>
+            <span class="toggle">+</span>
         </div>
 
         <div class="service-content">
-            <img src="../image/residential_architecture.jpg" loading="lazy">
-            <p>Modern, functional and sustainable architectural solutions tailored to your vision.</p>
+            <img src="images/architecture.jpg" alt="">
+            <div class="text">
+                <p>
+                    We provide innovative and sustainable architectural solutions tailored to each client.
+                    Our designs focus on functionality, aesthetics, and environmental responsibility.
+                </p>
+
+                <ul>
+                    <li>Residential & Commercial Design</li>
+                    <li>3D Visualizations</li>
+                    <li>Building Plans & Approvals</li>
+                    <li>Renovations & Extensions</li>
+                </ul>
+
+                <p>
+                    From concept to completion, we ensure every detail aligns with your vision and industry standards.
+                </p>
+            </div>
         </div>
     </div>
 
-    <div class="service-item">
+    <!-- QUANTITY SURVEYING -->
+    <div class="service">
         <div class="service-header">
             <h2>Quantity Surveying</h2>
-            <span class="icon">+</span>
+            <span class="toggle">+</span>
         </div>
 
         <div class="service-content">
-            <img src="../image/health-safety.jpg" loading="lazy">
-            <p>Accurate cost planning, budgeting and financial control for construction projects.</p>
+            <img src="images/quantity.jpg" alt="">
+            <div class="text">
+                <p>
+                    Our quantity surveying services ensure cost efficiency and financial control throughout your project lifecycle.
+                </p>
+
+                <ul>
+                    <li>Cost Estimation & Budgeting</li>
+                    <li>Procurement Advice</li>
+                    <li>Contract Administration</li>
+                    <li>Risk Management</li>
+                </ul>
+
+                <p>
+                    We help you maximize value while minimizing risks and unnecessary expenses.
+                </p>
+            </div>
         </div>
     </div>
 
-    <div class="service-item">
+    <!-- PROJECT MANAGEMENT -->
+    <div class="service">
         <div class="service-header">
             <h2>Project Management</h2>
-            <span class="icon">+</span>
+            <span class="toggle">+</span>
         </div>
 
         <div class="service-content">
-            <img src="../image/project-management.jpg" loading="lazy">
-            <p>End-to-end project delivery ensuring quality, deadlines and efficiency.</p>
+            <img src="images/project.jpg" alt="">
+            <div class="text">
+                <p>
+                    We manage projects from inception to completion, ensuring quality, efficiency, and timely delivery.
+                </p>
+
+                <ul>
+                    <li>Planning & Scheduling</li>
+                    <li>Team Coordination</li>
+                    <li>Quality Control</li>
+                    <li>On-site Supervision</li>
+                </ul>
+
+                <p>
+                    Our structured approach guarantees smooth execution and successful project outcomes.
+                </p>
+            </div>
         </div>
     </div>
 
 </section>
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h3>KALM-NTG</h3>
+            <p>Architecture • Engineering • Project Management</p>
+        </div>
 
-  <div class="footer-container">
-    <div>
-      <h3>KALM-NTG</h3>
-      <p>Architecture • Engineering • Project Management</p>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <p>076 317 9459</p>
+            <p>kalmntgarch@gmail.com</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Offices</h4>
+            <p>Mahikeng</p>
+            <p>Johannesburg</p>
+            <p>Gaborone</p>
+        </div>
     </div>
 
-    <div>
-      <h4>Contact</h4>
-      <p>076 317 9459</p>
-      <p>kalmntgarch@gmail.com</p>
+    <div class="footer-bottom">
+        © 2026 KALM-NTG Architects
     </div>
-
-    <div>
-      <h4>Offices</h4>
-      <p>Mahikeng</p>
-      <p>Johannesburg</p>
-      <p>Gaborone</p>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    © 2026 KALM-NTG Architects
-  </div>
-
 </footer>
 
-<script src="../js/services.js"></script>
-
+<script src="services.js"></script>
 </body>
 </html>
