@@ -1,13 +1,16 @@
-// Optional animation trigger or interactivity (modern and simple)
-document.addEventListener('DOMContentLoaded', () => {
-  const cards = document.querySelectorAll('.service-card');
-  cards.forEach((card, i) => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(30px)';
-    setTimeout(() => {
-      card.style.transition = 'all 0.6s ease';
-      card.style.opacity = '1';
-      card.style.transform = 'translateY(0)';
-    }, i * 200);
-  });
+const serviceItems = document.querySelectorAll(".service-item");
+
+serviceItems.forEach(item => {
+    item.querySelector(".service-header").addEventListener("click", () => {
+
+        // close others
+        serviceItems.forEach(i => {
+            if (i !== item) {
+                i.classList.remove("active");
+            }
+        });
+
+        // toggle current
+        item.classList.toggle("active");
+    });
 });
