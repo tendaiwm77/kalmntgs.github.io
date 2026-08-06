@@ -5,19 +5,28 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
+/* PAGE FIX (prevents footer going to top) */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.services {
+  flex: 1;
+}
+
 /* NAV */
 .navbar {
   background: #8B0000;
   color: white;
-  display: flex;
-  justify-content: space-between;
   padding: 15px 40px;
 }
 
-/* HERO (PARALLAX STYLE) */
+/* HERO */
 .hero {
   height: 70vh;
-  background: url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600") center/cover no-repeat fixed;
+  background: url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,23 +38,22 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.8));
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.85));
 }
 
-/* GLASS EFFECT */
 .hero-content {
   position: relative;
   color: white;
   text-align: center;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(6px);
   background: rgba(255,255,255,0.05);
   padding: 40px 60px;
   border-radius: 12px;
-  animation: fadeIn 1.2s ease;
+  animation: fadeIn 1s ease;
 }
 
 .hero-content h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 /* SERVICES */
@@ -60,7 +68,6 @@
 }
 
 .services h2 {
-  font-size: 2.2rem;
   margin: 10px 0 40px;
 }
 
@@ -71,11 +78,13 @@
   gap: 30px;
 }
 
-/* CARD PREMIUM */
+/* CARD */
 .card {
   background: white;
   border-radius: 15px;
   overflow: hidden;
+  text-decoration: none;
+  color: black;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   transition: 0.4s;
   transform: translateY(20px);
@@ -88,7 +97,7 @@
 }
 
 .card:hover {
-  transform: translateY(-12px) scale(1.02);
+  transform: translateY(-10px) scale(1.02);
   box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
@@ -98,26 +107,48 @@
   object-fit: cover;
 }
 
+/* FIX SLOW IMAGES */
+.card img {
+  content-visibility: auto;
+}
+
+/* CARD CONTENT */
 .card-content {
   padding: 20px;
 }
 
 .card h3 {
   color: #8B0000;
-  margin-bottom: 10px;
 }
 
-/* FOOTER */
-.footer {
+/* FOOTER (FIXED + CONSISTENT) */
+.site-footer {
   background: #8B0000;
   color: white;
-  padding: 40px;
+  padding: 40px 20px 20px;
+  margin-top: auto;
 }
 
-.footer-content {
+.footer-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.footer-col {
+  margin-bottom: 20px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 10px;
 }
 
 /* ANIMATION */
