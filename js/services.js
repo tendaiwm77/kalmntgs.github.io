@@ -1,26 +1,16 @@
-const services = document.querySelectorAll(".service");
+// FADE-IN ON SCROLL
+const cards = document.querySelectorAll(".card");
 
-services.forEach(service => {
-  const header = service.querySelector(".service-header");
-  const content = service.querySelector(".service-content");
-  const toggle = service.querySelector(".toggle");
-
-  header.addEventListener("click", () => {
-    const isOpen = content.style.display === "flex";
-
-    // close all first (clean UX)
-    document.querySelectorAll(".service-content").forEach(c => {
-      c.style.display = "none";
-    });
-
-    document.querySelectorAll(".toggle").forEach(t => {
-      t.textContent = "+";
-    });
-
-    // open current
-    if (!isOpen) {
-      content.style.display = "flex";
-      toggle.textContent = "−";
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
     }
   });
+}, {
+  threshold: 0.2
+});
+
+cards.forEach(card => {
+  observer.observe(card);
 });
