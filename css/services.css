@@ -33,11 +33,12 @@
 /* HERO */
 .hero {
   height: 60vh;
-  background: url("images/services-hero.jpg") center/cover no-repeat;
+  background-image: url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 
 .hero-overlay {
