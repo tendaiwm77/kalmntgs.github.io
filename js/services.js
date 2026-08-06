@@ -1,4 +1,4 @@
-// FADE-IN ON SCROLL
+// Fade-in cards on scroll
 const cards = document.querySelectorAll(".card");
 
 const observer = new IntersectionObserver(entries => {
@@ -7,10 +7,6 @@ const observer = new IntersectionObserver(entries => {
       entry.target.classList.add("show");
     }
   });
-}, {
-  threshold: 0.2
-});
+}, { threshold: 0.2 });
 
-cards.forEach(card => {
-  observer.observe(card);
-});
+cards.forEach(card => observer.observe(card));
